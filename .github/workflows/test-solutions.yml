@@ -1,0 +1,72 @@
+name: Test LeetCode Solutions
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas numpy
+
+    - name: Test Problem #1 - Two Sum
+      run: python 0001_two_sum_easy.py
+
+    - name: Test Problem #2 - Add Two Numbers
+      run: python 0002_add_two_numbers_medium.py
+
+    - name: Test Problem #3 - Longest Substring Without Repeating Characters
+      run: python 0003_longest_substring_without_repeating_characters_medium.py
+
+    - name: Test Problem #4 - Median of Two Sorted Arrays
+      run: python 0004_median_of_two_sorted_arrays_hard.py
+
+    - name: Test Problem #5 - Longest Palindromic Substring
+      run: python 0005_longest_palindromic_substring.py
+
+    - name: Test Problem #13 - Roman to Integer
+      run: python 0013_roman_to_integer.py
+
+    - name: Test Problem #20 - Valid Parentheses
+      run: python 0020_valid_parentheses.py
+
+    - name: Test Problem #28 - Find the Index of the First Occurrence in a String
+      run: python 0028_find_the_index_of_the_first_occurrence_in_a_string.py
+
+    - name: Test Problem #66 - Plus One
+      run: python 0066_plus_one.py
+
+    - name: Test Problem #69 - Sqrt(x)
+      run: python 0069_sqrt_x.py
+
+    - name: Test Problem #70 - Climbing Stairs
+      run: python 0070_climbing_stairs.py
+
+    - name: Test Problem #88 - Merge Sorted Array
+      run: python 0088_merge_sorted_array.py
+
+    - name: Test Problem #136 - Single Number
+      run: python 0136_single_number.py
+
+    - name: Test Problem #202 - Happy Number
+      run: python 0202_happy_number.py
+
+    - name: Test Problem #219 - Contains Duplicate II
+      run: python 0219_contains_duplicate_II.py
+
+    - name: Test Problem #3507 - Minimum Pair Removal to Sort Array
+      run: python 3507_minimum_pair_removal_to_sort_array.py
