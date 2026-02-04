@@ -1,5 +1,7 @@
 # LeetCode Solutions
 
+[![Test LeetCode Solutions](https://github.com/alexkamer/LeetCode_solutions/actions/workflows/test-solutions.yml/badge.svg)](https://github.com/alexkamer/LeetCode_solutions/actions/workflows/test-solutions.yml)
+
 A collection of my LeetCode problem solutions, demonstrating problem-solving skills and algorithm knowledge.
 
 ## Progress
